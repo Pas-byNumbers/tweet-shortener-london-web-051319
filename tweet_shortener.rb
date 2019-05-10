@@ -1,2 +1,4 @@
 # Write your code here.
-def tweet
+def tweet_shortener
+  
+end
