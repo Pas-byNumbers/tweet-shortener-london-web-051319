@@ -23,3 +23,27 @@ def word_substituter(string)
   end.join(" ")
 end 
 
+def bulk_tweet_shortener(tweet_array)
+  tweet_array.collect do |tweet|
+    puts word_substituter(tweet)
+  end
+end
+
+
+def selective_tweet_shortener(tweet)
+  if tweet.length > 140
+    word_substituter(tweet)
+  else
+    tweet
+  end
+end
+
+
+def shortened_tweet_truncator(tweet)
+  shortened = word_substituter(tweet)
+  if shortened.length > 140
+    shortened[0..136].concat("...")
+  else 
+    shortened
+  end
+end
